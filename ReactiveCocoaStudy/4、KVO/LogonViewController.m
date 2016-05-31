@@ -33,6 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    self.navigationItem.title = @"注册——KVO监听实现";
     [self setSignal];
 }
 
