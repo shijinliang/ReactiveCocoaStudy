@@ -17,6 +17,8 @@
 
 @property (weak, nonatomic) IBOutlet UITextField *phoneText;
 
+@property (weak, nonatomic) IBOutlet UILabel *phoneNumLabel;
+
 @property (weak, nonatomic) IBOutlet UIButton *logonButton;
 
 /**
@@ -42,6 +44,7 @@
 - (void)setSignal
 {
     [[RACSignal combineLatest:@[self.nameText.rac_textSignal, self.passwordText.rac_textSignal, self.phoneText.rac_textSignal] reduce:^id(NSString *name, NSString *password, NSString *phone) {
+        self.phoneNumLabel.text = [NSString stringWithFormat:@"%d",phone.length];
         return @(name.length > 0 && password.length >= 6 && phone.length==13);
     }] subscribeNext:^(NSNumber *x) {
         BOOL isShow = [x boolValue]; 
