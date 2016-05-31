@@ -8,6 +8,7 @@
 
 #import "LogonViewController.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
+#import "ShowPromptMessage.h"
 
 @interface LogonViewController ()
 
@@ -73,7 +74,7 @@
 
 
 - (IBAction)logonClick:(id)sender {
-    NSLog(@"开始注册");
+    [[ShowPromptMessage sharedManager] showPromptMessage:@"开始注册"];
 }
 
 @end
