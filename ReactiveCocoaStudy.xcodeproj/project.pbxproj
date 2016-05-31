@@ -19,6 +19,7 @@
 		3CFFB5831CFD90A200606D26 /* ViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFFB57F1CFD90A200606D26 /* ViewItem.m */; };
 		3CFFB5871CFDBB5C00606D26 /* LogonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFFB5851CFDBB5C00606D26 /* LogonViewController.m */; };
 		3CFFB5881CFDBB5C00606D26 /* LogonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CFFB5861CFDBB5C00606D26 /* LogonViewController.xib */; };
+		3CFFB58C1CFDC7A600606D26 /* ShowPromptMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFFB58B1CFDC7A600606D26 /* ShowPromptMessage.m */; };
 		6B6CF58EEE3E1A33C41683B4 /* Pods_ReactiveCocoaStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2EE79D054B8DD836AB3A24 /* Pods_ReactiveCocoaStudy.framework */; };
 /* End PBXBuildFile section */
 
@@ -44,6 +45,8 @@
 		3CFFB5841CFDBB5C00606D26 /* LogonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogonViewController.h; sourceTree = "<group>"; };
 		3CFFB5851CFDBB5C00606D26 /* LogonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogonViewController.m; sourceTree = "<group>"; };
 		3CFFB5861CFDBB5C00606D26 /* LogonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogonViewController.xib; sourceTree = "<group>"; };
+		3CFFB58A1CFDC7A600606D26 /* ShowPromptMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowPromptMessage.h; sourceTree = "<group>"; };
+		3CFFB58B1CFDC7A600606D26 /* ShowPromptMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowPromptMessage.m; sourceTree = "<group>"; };
 		AD2EE79D054B8DD836AB3A24 /* Pods_ReactiveCocoaStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveCocoaStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9A4028D68B43B5050747E4 /* Pods-ReactiveCocoaStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoaStudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoaStudy/Pods-ReactiveCocoaStudy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,6 +96,7 @@
 				3CFFB5551CFD759B00606D26 /* Assets.xcassets */,
 				3CFFB5571CFD759B00606D26 /* LaunchScreen.storyboard */,
 				3CFFB55A1CFD759B00606D26 /* Info.plist */,
+				3CFFB5891CFDC79F00606D26 /* Tool */,
 				3CFFB5491CFD759B00606D26 /* Supporting Files */,
 			);
 			path = ReactiveCocoaStudy;
@@ -166,6 +170,15 @@
 				3CFFB57F1CFD90A200606D26 /* ViewItem.m */,
 			);
 			path = Main;
+			sourceTree = "<group>";
+		};
+		3CFFB5891CFDC79F00606D26 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				3CFFB58A1CFDC7A600606D26 /* ShowPromptMessage.h */,
+				3CFFB58B1CFDC7A600606D26 /* ShowPromptMessage.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		8BD2556CAB5EA4B61F7249E4 /* Pods */ = {
@@ -314,6 +327,7 @@
 				3CFFB54B1CFD759B00606D26 /* main.m in Sources */,
 				3CFFB5801CFD90A200606D26 /* ViewCell.m in Sources */,
 				3CFFB56E1CFD8AAD00606D26 /* NewViewController.m in Sources */,
+				3CFFB58C1CFDC7A600606D26 /* ShowPromptMessage.m in Sources */,
 				3CFFB5831CFD90A200606D26 /* ViewItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
