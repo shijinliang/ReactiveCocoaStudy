@@ -17,6 +17,8 @@
 		3CFFB5811CFD90A200606D26 /* ViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CFFB57B1CFD90A200606D26 /* ViewCell.xib */; };
 		3CFFB5821CFD90A200606D26 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFFB57D1CFD90A200606D26 /* ViewController.m */; };
 		3CFFB5831CFD90A200606D26 /* ViewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFFB57F1CFD90A200606D26 /* ViewItem.m */; };
+		3CFFB5871CFDBB5C00606D26 /* LogonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3CFFB5851CFDBB5C00606D26 /* LogonViewController.m */; };
+		3CFFB5881CFDBB5C00606D26 /* LogonViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3CFFB5861CFDBB5C00606D26 /* LogonViewController.xib */; };
 		6B6CF58EEE3E1A33C41683B4 /* Pods_ReactiveCocoaStudy.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AD2EE79D054B8DD836AB3A24 /* Pods_ReactiveCocoaStudy.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,9 @@
 		3CFFB57D1CFD90A200606D26 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		3CFFB57E1CFD90A200606D26 /* ViewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewItem.h; sourceTree = "<group>"; };
 		3CFFB57F1CFD90A200606D26 /* ViewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewItem.m; sourceTree = "<group>"; };
+		3CFFB5841CFDBB5C00606D26 /* LogonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogonViewController.h; sourceTree = "<group>"; };
+		3CFFB5851CFDBB5C00606D26 /* LogonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogonViewController.m; sourceTree = "<group>"; };
+		3CFFB5861CFDBB5C00606D26 /* LogonViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogonViewController.xib; sourceTree = "<group>"; };
 		AD2EE79D054B8DD836AB3A24 /* Pods_ReactiveCocoaStudy.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactiveCocoaStudy.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE9A4028D68B43B5050747E4 /* Pods-ReactiveCocoaStudy.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactiveCocoaStudy.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ReactiveCocoaStudy/Pods-ReactiveCocoaStudy.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -128,6 +133,9 @@
 		3CFFB5681CFD8A9700606D26 /* 4、KVO */ = {
 			isa = PBXGroup;
 			children = (
+				3CFFB5841CFDBB5C00606D26 /* LogonViewController.h */,
+				3CFFB5851CFDBB5C00606D26 /* LogonViewController.m */,
+				3CFFB5861CFDBB5C00606D26 /* LogonViewController.xib */,
 			);
 			path = "4、KVO";
 			sourceTree = "<group>";
@@ -237,6 +245,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CFFB5881CFDBB5C00606D26 /* LogonViewController.xib in Resources */,
 				3CFFB5591CFD759B00606D26 /* LaunchScreen.storyboard in Resources */,
 				3CFFB5561CFD759B00606D26 /* Assets.xcassets in Resources */,
 				3CFFB56F1CFD8AAD00606D26 /* NewViewController.xib in Resources */,
@@ -301,6 +310,7 @@
 			files = (
 				3CFFB54E1CFD759B00606D26 /* AppDelegate.m in Sources */,
 				3CFFB5821CFD90A200606D26 /* ViewController.m in Sources */,
+				3CFFB5871CFDBB5C00606D26 /* LogonViewController.m in Sources */,
 				3CFFB54B1CFD759B00606D26 /* main.m in Sources */,
 				3CFFB5801CFD90A200606D26 /* ViewCell.m in Sources */,
 				3CFFB56E1CFD8AAD00606D26 /* NewViewController.m in Sources */,

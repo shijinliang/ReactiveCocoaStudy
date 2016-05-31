@@ -7,9 +7,11 @@
 //
 
 #import "ViewController.h"
+#import "ViewCell.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
 #import "NewViewController.h"
-#import "ViewCell.h"
+#import "LogonViewController.h"
+
 
 @interface ViewController ()<UITableViewDataSource, UITableViewDelegate>
 {
@@ -36,8 +38,12 @@
 - (void)setData
 {
     ViewItem *item1 = [ViewItem initWithTitle:@"rac_signalForSelector" content:@"用于替代代理"];
+    
+    ViewItem *item2 = [ViewItem initWithTitle:@"" content:@""];
+    ViewItem *item3 = [ViewItem initWithTitle:@"" content:@""];
+    ViewItem *item4 = [ViewItem initWithTitle:@"combineLatest:reduce:" content:@"KVO监听按钮多个状态"];
     //………………
-    _dataArray = @[item1];
+    _dataArray = @[item1, item2, item3, item4];
 }
 
 - (void)setSignal
@@ -53,7 +59,12 @@
             case 0:
                 [self openNew];
                 break;
-                
+            case 1:
+                [self openLogon];
+            case 2:
+                [self openLogon];
+            case 3:
+                [self openLogon];
             default:
                 break;
         }
@@ -99,6 +110,12 @@
     [ctrl.delegateSignal subscribeNext:^(id x) {
         NSLog(@"12312");
     }];
+    [self.navigationController pushViewController:ctrl animated:YES];
+}
+
+- (void)openLogon
+{
+    LogonViewController *ctrl = [[LogonViewController alloc] init];
     [self.navigationController pushViewController:ctrl animated:YES];
 }
 
