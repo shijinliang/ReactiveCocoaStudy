@@ -8,21 +8,55 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewViewController">
             <connections>
                 <outlet property="btn" destination="qCM-6T-ivT" id="QHg-bs-sy1"/>
+                <outlet property="myTableView" destination="8Jb-W7-cIx" id="b3V-U1-aeq"/>
                 <outlet property="tView" destination="i5M-Pr-FkT" id="ITW-mD-dqs"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCM-6T-ivT">
-                    <rect key="frame" x="191" y="244" width="150" height="30"/>
-                    <state key="normal" title="给上一个界面传递信号"/>
-                </button>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fcj-tw-iDU">
+                    <rect key="frame" x="0.0" y="70" width="320" height="70"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCM-6T-ivT">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                            <color key="backgroundColor" red="0.97254901959999995" green="0.73333333329999995" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <state key="normal" title="点击按钮测试"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击下方tableview的cell或者滑动tableview" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U6c-XK-a2K">
+                            <rect key="frame" x="0.0" y="30" width="320" height="40"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" red="0.66666666666666663" green="0.66666666666666663" blue="0.66666666666666663" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8Jb-W7-cIx">
+                    <rect key="frame" x="0.0" y="161" width="320" height="100"/>
+                    <color key="backgroundColor" red="0.87843137250000003" green="0.2470588235" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="kDC-lT-rnR"/>
+                    </constraints>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="mjv-zW-36n"/>
+                        <outlet property="delegate" destination="-1" id="92B-zu-6bA"/>
+                    </connections>
+                </tableView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.92156862750000001" green="0.7725490196" blue="0.66666666669999997" alpha="1" colorSpace="calibratedRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="8Jb-W7-cIx" secondAttribute="trailing" id="7iC-mK-qRL"/>
+                <constraint firstItem="fcj-tw-iDU" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="70" id="MgQ-Ay-SzF"/>
+                <constraint firstAttribute="trailing" secondItem="fcj-tw-iDU" secondAttribute="trailing" id="UzN-VP-1WV"/>
+                <constraint firstItem="8Jb-W7-cIx" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="f9h-DF-ZVk"/>
+                <constraint firstItem="fcj-tw-iDU" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="pYw-1A-VYw"/>
+                <constraint firstItem="8Jb-W7-cIx" firstAttribute="top" secondItem="fcj-tw-iDU" secondAttribute="bottom" constant="20" id="y1K-Wq-Yxb"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
         </view>
     </objects>
 </document>
