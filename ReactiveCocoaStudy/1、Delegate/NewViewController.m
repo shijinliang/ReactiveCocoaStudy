@@ -49,6 +49,7 @@
     [[myButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         [[ShowPromptMessage sharedManager] showPromptMessage:@"测试自己创建按钮点击事件"];
     }];
+    //[myButton addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:myButton];
     
     //监听一个方法有没有被调用
