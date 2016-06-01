@@ -25,6 +25,7 @@
         [[ShowPromptMessage sharedManager] showPromptMessage:@"按钮点击事件委托交给rac处理"];
     }];
     
+    //👌
     [[self rac_signalForSelector:@selector(tableView:didSelectRowAtIndexPath:) fromProtocol:@protocol(UITableViewDelegate)] subscribeNext:^(RACTuple *tuple) {
         UITableView *tableView = [tuple first];
         NSIndexPath *path = (NSIndexPath *)[tuple second];
@@ -40,7 +41,7 @@
     //【带有返回值得代理不适合此种方法】
     self.myTableView.delegate = self;
     
-    //自己新建一个button
+    //👌自己新建一个button
     UIButton *myButton = [UIButton buttonWithType:UIButtonTypeCustom];
     
     [myButton setTitle:@"让我来测试自定义button代理" forState:UIControlStateNormal];
@@ -48,11 +49,25 @@
     myButton.backgroundColor = [UIColor blueColor];
     [[myButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
         [[ShowPromptMessage sharedManager] showPromptMessage:@"测试自己创建按钮点击事件"];
+        
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"xiaoshiceshi" object:nil];
     }];
     //[myButton addTarget:self action:@selector(click:) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:myButton];
     
-    //监听一个方法有没有被调用
+    //👌*******************
+    UIButton *sButton = [UIButton buttonWithType:UIButtonTypeCustom];
+    
+    [sButton setTitle:@"测试通知" forState:UIControlStateNormal];
+    sButton.frame = CGRectMake(0, CGRectGetMaxY(myButton.frame)+20, 280, 30);
+    sButton.backgroundColor = [UIColor blueColor];
+    [[sButton rac_signalForControlEvents:UIControlEventTouchUpInside] subscribeNext:^(id x) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"xiaoshiceshi" object:nil];
+    }];
+    [self.view addSubview:sButton];
+    
+    //*******************
+    //👌监听一个方法有没有被调用
     [[self rac_signalForSelector:@selector(tableView:numberOfRowsInSection:)] subscribeNext:^(id x) {
         NSLog(@"监听tableView:numberOfRowsInSection:被调用");
     }];
@@ -63,6 +78,13 @@
     
     //这个都需要放在监听后面，不然你都执行完了，才设置监听岂不是浪费了😄
     [self goodBoy];
+    
+    
+    //👌监听通知
+    [[[NSNotificationCenter defaultCenter] rac_addObserverForName:@"xiaoshiceshi" object:nil] subscribeNext:^(id x) {
+         [[ShowPromptMessage sharedManager] showPromptMessage:@"上面点击事件给我发来通知"];
+        
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
